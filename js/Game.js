@@ -29,4 +29,13 @@ class Game {
     }
   }
 
+  //this method removes a life, removes a heart from the board, and,
+  //if the player is out of lives, ends the game.
+  removeLife() {
+    if (scoreboard =< 1)
+    scoreboard.remove(scoreboard[0]);
+  } else {
+    alert('Game Over!');
+  }
+
 }
