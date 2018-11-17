@@ -5,11 +5,9 @@
 
 class Game {
   var phrases = [];
-  function Misphrase(missed, phrases) {
-    constructor() {
+  constructor Misphrase(missed, phrases) {
       this.missed = missed;
       this.phrases = phrases;
-    }
   }
 
   //this method randomly retrieves one of the phrases stored in the phrases array.
@@ -36,6 +34,23 @@ class Game {
     scoreboard.remove(scoreboard[0]);
   } else {
     alert('Game Over!');
+  }
+
+  //this method checks to see if the player has selected all of the letters.
+  checkForWin() {
+
+  }
+
+  //this method displays a message if the player
+  // wins or a different message if they lose.
+  gameOver() {
+
+  }
+
+  //calls the getRandomPhrase() method, and adds that phrase to the board
+  // by calling the Phrase class' addPhraseToDisplay() method.
+  startGame() {
+
   }
 
 }
