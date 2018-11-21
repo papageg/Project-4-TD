@@ -3,11 +3,15 @@
 //getting random phrases, checking for a win,
 // and removing a life counter.
 
+
+//create game class
+const phrase = new Phrase
+
+
 class Game {
-  var phrases = [];
   constructor Misphrase(missed, phrases) {
       this.missed = missed;
-      this.phrases = phrases;
+      this.phrases = [];
   }
 
   //this method randomly retrieves one of the phrases stored in the phrases array.

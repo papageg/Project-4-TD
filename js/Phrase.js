@@ -1,6 +1,8 @@
 //create a Phrase class to handle the creation of phrases
 class Prase {
-  constructor (){
+  constructor(phrase) {
+    this.phrase = phrase;
+  };
     /*
     this adds letter placeholders to the display when the game starts.
     Each letter is presented by an empty box, one list item for each letter.
@@ -9,7 +11,25 @@ class Prase {
      Make sure the phrase displayed on the screen doesn't include spaces.
     */
     addPhraseToDisplay() {
-
+      const phraseList = document.querySelector("#phrase ul");
+      const textPhrase = this.phrase;
+      
+      const li = document.createElement('li');
+//       <div id="phrase" class="section">
+//     <ul>
+//         <li class="hide letter h">h</li>
+//         <li class="hide letter o">o</li>
+//         <li class="hide letter w">w</li>
+//         <li class="hide space"> </li>
+//         <li class="hide letter a">a</li>
+//         <li class="hide letter r">r</li>
+//         <li class="hide letter e">e</li>
+//         <li class="hide space"> </li>
+//         <li class="hide letter y">y</li>
+//         <li class="hide letter o">o</li>
+//         <li class="hide letter u">u</li>
+//     </ul>
+// </div>
     }
 
 
@@ -31,5 +51,4 @@ class Prase {
     showMatchedLetter() {
 
     }
-  }
 }
