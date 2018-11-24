@@ -5,9 +5,10 @@
 //create game class
 const phrase = new Phrase;
 class Game {
+  
 	constructor(missed, phrase) {
 		this.missed = missed;
-		this.phrases = phrases;
+		this.phrase = phrase;
 	}
 	//this method randomly retrieves one of the phrases stored in the phrases array.
 	getRandomPhrase() {
@@ -28,11 +29,13 @@ class Game {
 	//this method removes a life, removes a heart from the board, and,
 	//if the player is out of lives, ends the game.
 	removeLife() {
-		if (scoreboard <= 1) scoreboard.remove(scoreboard[0]);
+		if (scoreboard <= 1) {
+      scoreboard.remove(scoreboard[0]);
 	}
 	else {
 		alert('Game Over!');
 	}
+}
 
 	//this method checks to see if the player has selected all of the letters.
 	checkForWin() {}
