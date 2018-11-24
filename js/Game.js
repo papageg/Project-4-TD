@@ -5,22 +5,22 @@
 //create game class
 const phrase = new Phrase;
 class Game {
-  
+
 	constructor(missed, phrase) {
 		this.missed = missed;
 		this.phrase = phrase;
 	}
 	//this method randomly retrieves one of the phrases stored in the phrases array.
 	getRandomPhrase() {
-		const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+		const randomPhrase = phrase[Math.floor(Math.random() * phrase.length)];
 		//  return randomPhrase.toLowerCase().split('');
 	}
 	//this method checks to see if the button clicked by the player
 	//matches a letter in the phrase.
 	//Try a switch statment??
 	handleInteraction() {
-		if (button.click() === phrases.forEach()) {
-			showMatchedLetter(phrases);
+		if (button.click() === phrase.forEach()) {
+			showMatchedLetter();
 			checkForWin();
 		} else {
 			removeLife();
