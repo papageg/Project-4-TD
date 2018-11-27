@@ -39,9 +39,12 @@ class Phrase {
 	////////////////////////////////////////////////////////////////////////////
 	/***************************************************************************/
 	//checks to see if letter selected by player matches a letter in the phrase.
-	checkLetter() {}
+	checkLetter() {
+	}
 	////////////////////////////////////////////////////////////////////////////
 	/***************************************************************************/
 	// reveals the letter(s) on the board that matches player's selection.
-	showMatchedLetter() {}
+	showMatchedLetter() {
+		console.log('ggg');
+	}
 }

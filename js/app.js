@@ -9,9 +9,13 @@ function resetDisplay() {
 //It disables the button on the onscreen keyboard and calls
 //the handleInteraction() method of the Game class.
 function markButton() {
-   document.getElementsById('qwerty').disabled = 'true';
+  document.addEventListener('click', button => {
+    button.target.disabled = true;
+
+  })
 
 }
+
 //Add an event listener to the "Start Game" button which calls
 // the resetDisplay() function, creates a new Game object,
 // and starts the game.
@@ -25,4 +29,5 @@ function markButton() {
 // the resetDisplay() function, creates a new Game object,
 // and starts the game.
 document.getElementById("btn__reset").addEventListener("click", resetDisplay);
-document.getElementsByClassName('key').addEventListener("click", markButton);
+markButton();
+game.handleInteraction();
