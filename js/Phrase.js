@@ -1,7 +1,7 @@
 //create a Phrase class to handle the creation of phrases
 class Phrase {
-	constructor(phrase) {
-		this.phrase = phrase;
+	constructor(phrases) {
+		this.phrases = phrases;
 	}
 	/*
 	this adds letter placeholders to the display when the game starts.

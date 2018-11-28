@@ -1,20 +1,4 @@
 
-const differentPhrases = ['this this this', 'one one one', 'that that that']
-function getRandomPhrase() {
-  const randomPhrase = phrase[Math.floor(Math.random() * phrase.length)];
-  //  return randomPhrase.toLowerCase().split('');
-}
-
-function removeLife() {
-  let scoreboard = 5;
-  if (scoreboard >= 1) {
-    scoreboard--
-}
-else {
-  alert('Game Over!');
-}
-}
-
 function handleInteraction() {
   if (checkLetter()) {
       phrase.showMatchedLetter();

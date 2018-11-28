@@ -6,14 +6,15 @@
 //const phrase = new Phrase;
 class Game {
 
-	constructor(missed, phrase) {
+	constructor(missed, phrases) {
 		this.missed = missed;
-		this.phrase = phrase;
+		this.phrases = phrases;
 	}
+	const phrases = ['this is first', 'this is second', 'this is third'];
 	//this method randomly retrieves one of the phrases stored in the phrases array.
 	getRandomPhrase() {
-		const randomPhrase = phrase[Math.floor(Math.random() * phrase.length)];
-		//  return randomPhrase.toLowerCase().split('');
+		const randomPhrase = phrases[Math.floor(Math.random() * phrase.length)];
+		return randomPhrase.toLowerCase().split('');
 	}
 	//this method checks to see if the button clicked by the player
 	//matches a letter in the phrase.
