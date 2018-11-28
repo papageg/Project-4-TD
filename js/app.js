@@ -1,3 +1,4 @@
+const game = new Game;
  const phrases = ['this is first', 'this is second', 'this is third'];
 
 function handleInteraction() {
