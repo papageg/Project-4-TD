@@ -1,6 +1,19 @@
-// Perform basic DOM selection, add event handlers,
-//and to reset the game when it ends
-let game = new Game();
+
+const phrase = ['this this this', 'one one one', 'that that that']
+function handleInteraction() {
+  if (phrase.checkLetter()) {
+      phrase.showMatchedLetter();
+      this.checkForWin();
+    } else {
+      removeLife();
+    }
+}
+
+checkLetter() {
+
+}
+
+
 //this function hides the start screen overlay.
 function resetDisplay() {
   document.getElementById("overlay").style.display = "none";
@@ -11,10 +24,11 @@ function resetDisplay() {
 function markButton() {
   document.addEventListener('click', button => {
     button.target.disabled = true;
-    game.handleInteraction();
+    handleInteraction()
   })
+  }
 
-}
+
 
 //Add an event listener to the "Start Game" button which calls
 // the resetDisplay() function, creates a new Game object,

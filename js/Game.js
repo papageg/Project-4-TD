@@ -3,7 +3,7 @@
 //getting random phrases, checking for a win,
 // and removing a life counter.
 //create game class
-const phrase = new Phrase;
+//const phrase = new Phrase;
 class Game {
 
 	constructor(missed, phrase) {
@@ -19,12 +19,7 @@ class Game {
 	//matches a letter in the phrase.
 	//Try a switch statment??
 	handleInteraction() {
-		if (phrase.checkLetter()) {
-			phrase.showMatchedLetter();
-			this.checkForWin();
-		} else {
-			removeLife();
-		}
+
 	}
 	//this method removes a life, removes a heart from the board, and,
 	//if the player is out of lives, ends the game.
