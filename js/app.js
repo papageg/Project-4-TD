@@ -1,7 +1,22 @@
 
-const phrase = ['this this this', 'one one one', 'that that that']
+const differentPhrases = ['this this this', 'one one one', 'that that that']
+function getRandomPhrase() {
+  const randomPhrase = phrase[Math.floor(Math.random() * phrase.length)];
+  //  return randomPhrase.toLowerCase().split('');
+}
+
+function removeLife() {
+  let scoreboard = 5;
+  if (scoreboard <= 1) {
+    scoreboard.remove(scoreboard[0]);
+}
+else {
+  alert('Game Over!');
+}
+}
+
 function handleInteraction() {
-  if (phrase.checkLetter()) {
+  if (checkLetter()) {
       phrase.showMatchedLetter();
       this.checkForWin();
     } else {
@@ -9,7 +24,7 @@ function handleInteraction() {
     }
 }
 
-checkLetter() {
+function checkLetter() {
 
 }
 
