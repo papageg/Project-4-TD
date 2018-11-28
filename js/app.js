@@ -7,8 +7,8 @@ function getRandomPhrase() {
 
 function removeLife() {
   let scoreboard = 5;
-  if (scoreboard <= 1) {
-    scoreboard.remove(scoreboard[0]);
+  if (scoreboard >= 1) {
+    scoreboard--
 }
 else {
   alert('Game Over!');
@@ -20,6 +20,7 @@ function handleInteraction() {
       phrase.showMatchedLetter();
       this.checkForWin();
     } else {
+
       removeLife();
     }
 }
