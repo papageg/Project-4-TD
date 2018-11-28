@@ -11,7 +11,7 @@ function resetDisplay() {
 function markButton() {
   document.addEventListener('click', button => {
     button.target.disabled = true;
-
+    game.handleInteraction();
   })
 
 }
@@ -30,4 +30,3 @@ function markButton() {
 // and starts the game.
 document.getElementById("btn__reset").addEventListener("click", resetDisplay);
 markButton();
-game.handleInteraction();

@@ -40,6 +40,9 @@ class Phrase {
 	/***************************************************************************/
 	//checks to see if letter selected by player matches a letter in the phrase.
 	checkLetter() {
+		if (addPhraseToDisplay().forEach() === phrase.forEach()) {
+			console.log('qqqz');
+		}
 	}
 	////////////////////////////////////////////////////////////////////////////
 	/***************************************************************************/

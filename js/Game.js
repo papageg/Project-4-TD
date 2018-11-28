@@ -19,7 +19,7 @@ class Game {
 	//matches a letter in the phrase.
 	//Try a switch statment??
 	handleInteraction() {
-		if (this.clicked === phrase.target) {
+		if (phrase.checkLetter()) {
 			phrase.showMatchedLetter();
 			this.checkForWin();
 		} else {
@@ -39,7 +39,7 @@ class Game {
 
 	//this method checks to see if the player has selected all of the letters.
 	checkForWin() {
-			console.log('hhh')
+
 	}
 	//this method displays a message if the player
 	// wins or a different message if they lose.
