@@ -10,11 +10,11 @@ class Game {
 		this.missed = missed;
 		this.phrases = phrases;
 	}
-	const phrases = ['this is first', 'this is second', 'this is third'];
+
 	//this method randomly retrieves one of the phrases stored in the phrases array.
 	getRandomPhrase() {
 		const randomPhrase = phrases[Math.floor(Math.random() * phrase.length)];
-		return randomPhrase.toLowerCase().split('');
+		return randomPhrase;
 	}
 	//this method checks to see if the button clicked by the player
 	//matches a letter in the phrase.
@@ -43,4 +43,5 @@ class Game {
 	//calls the getRandomPhrase() method, and adds that phrase to the board
 	// by calling the Phrase class' addPhraseToDisplay() method.
 	startGame() {}
+
 }
