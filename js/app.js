@@ -1,4 +1,4 @@
-const game = new Game;
+
  const phrases = ['this is first', 'this is second', 'this is third'];
 
 function handleInteraction() {
@@ -44,5 +44,8 @@ function markButton() {
 //Add an event listener to the "Start Game" button which calls
 // the resetDisplay() function, creates a new Game object,
 // and starts the game.
-document.getElementById("btn__reset").addEventListener("click", resetDisplay);
-markButton();
+document.getElementById("btn__reset").addEventListener("click", (e) => {
+   resetDisplay();
+   game = new Game(0, phrases);
+   game.startGame();
+});
