@@ -15,7 +15,7 @@ class Phrase {
 		const phraseList = document.querySelector("#phrase ul");
 		const textPhrase = this.phrase;
 		let phraseArray = textPhrase.split('');
-		testPhrase.forEach()(phraseLetter => {
+		textPhrase.forEach()(phraseLetter => {
 			const li = document.createElement('li');
 			phraseList.appenChild(li);
 			li.setAttribute('class', 'hide');
