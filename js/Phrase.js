@@ -14,7 +14,7 @@ class Phrase {
 	addPhraseToDisplay() {
 		const phraseList = document.querySelector("#phrase ul");
 		const textPhrase = this.phrase;
-		let phraseArray = textPhrases.split('');
+		let phraseArray = textPhrases.split('');h
 		getRandomPhrase();
 		textPhrase.forEach()(phraseLetter => {
 			const li = document.createElement('li');
