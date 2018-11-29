@@ -15,9 +15,9 @@ class Phrase {
 		const phraseList = document.querySelector("#phrase ul");
 		const textPhrase = this.phrase;
 		let phraseArray = textPhrase.split('');
-		textPhrase.forEach()(phraseLetter => {
+		phraseArray.forEach()(phraseLetter => {
 			const li = document.createElement('li');
-			phraseList.appenChild(li);
+			phraseList.appendChild(li);
 			li.setAttribute('class', 'hide');
 			li.textContent = phraseLetter;
       phraseLetter !== ' ' ? li.className = 'letter' : li.className = 'space';
