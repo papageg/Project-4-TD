@@ -3,7 +3,7 @@
 //getting random phrases, checking for a win,
 // and removing a life counter.
 //create game class
-const phrase = new Phrase;
+
 class Game {
 
 	constructor(missed, phrases) {
@@ -24,8 +24,7 @@ class Game {
 	      phrase.showMatchedLetter();
 	      this.checkForWin();
 	    } else {
-
-	      removeLife();
+	      this.removeLife();
 	    }
 	}
 	//this method removes a life, removes a heart from the board, and,
@@ -49,7 +48,8 @@ class Game {
 	//calls the getRandomPhrase() method, and adds that phrase to the board
 	// by calling the Phrase class' addPhraseToDisplay() method.
 	startGame() {
-		const phrase = getRandomPhrase();
+		const phrase = new Phrase;
+		phrase.getRandomPhrase()
 		phrase.addPhraseToDisplay(phrase);
 	}
 

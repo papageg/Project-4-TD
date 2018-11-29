@@ -12,10 +12,10 @@ class Phrase {
 	 Make sure the phrase displayed on the screen doesn't include spaces.
 	*/
 	addPhraseToDisplay() {
+		getRandomPhrase();
 		const phraseList = document.querySelector("#phrase ul");
 		const textPhrase = this.phrase;
-		let phraseArray = textPhrases.split('');h
-		getRandomPhrase();
+		let phraseArray = textPhrases.split('');
 		textPhrase.forEach()(phraseLetter => {
 			const li = document.createElement('li');
 			phraseList.appenChild(li);
