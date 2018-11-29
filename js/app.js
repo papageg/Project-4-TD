@@ -35,6 +35,6 @@ function markButton() {
 document.getElementById("btn__reset").addEventListener("click", (e) => {
   markButton();
    resetDisplay();
-   game = new Game(0, phrases);
+   game = new Game(0, phrase);
    game.startGame();
 });

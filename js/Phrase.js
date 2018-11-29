@@ -1,8 +1,8 @@
 //create a Phrase class to handle the creation of phrases
 
 class Phrase {
-	constructor(phrases) {
-		this.phrases = phrases;
+	constructor(phrase) {
+		this.phrase = phrase;
 	}
 	/*
 	this adds letter placeholders to the display when the game starts.
@@ -15,7 +15,7 @@ class Phrase {
 		const phraseList = document.querySelector("#phrase ul");
 		const textPhrase = this.phrase;
 		let phraseArray = textPhrase.split('');
-		textPhrases.forEach()(phraseLetter => {
+		testPhrase.forEach()(phraseLetter => {
 			const li = document.createElement('li');
 			phraseList.appenChild(li);
 			li.setAttribute('class', 'hide');

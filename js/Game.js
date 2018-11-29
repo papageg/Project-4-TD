@@ -6,9 +6,9 @@
 
 class Game {
 
-	constructor(missed, phrase) {
+	constructor(missed, phrases) {
 		this.missed = missed;
-		this.phrase = new Phrase();
+		this.phrases = new Phrase();
 	}
 
 	//this method randomly retrieves one of the phrases stored in the phrases array.
@@ -30,12 +30,12 @@ class Game {
 	//this method removes a life, removes a heart from the board, and,
 	//if the player is out of lives, ends the game.
 	removeLife() {
-		if (scoreboard <= 1) {
-      scoreboard.remove(scoreboard[0]);
-	}
-	else {
-		alert('Game Over!');
-	}
+	// 	if (scoreboard <= 1) {
+  //     scoreboard.remove(scoreboard[0]);
+	// }
+	// else {
+	// 	alert('Game Over!');
+	// }
 }
 
 	//this method checks to see if the player has selected all of the letters.
