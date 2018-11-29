@@ -52,5 +52,4 @@ class Game {
 		getRandomPhrase(phrase)
 		phrase.addPhraseToDisplay(phrase);
 	}
-
 }
