@@ -2,15 +2,7 @@
 let game = new Game;
  const phrases = ['this is first', 'this is second', 'this is third'];
 
-function handleInteraction() {
-  if (checkLetter()) {
-      phrase.showMatchedLetter();
-      this.checkForWin();
-    } else {
 
-      removeLife();
-    }
-}
 
 function checkLetter() {
 
@@ -27,7 +19,7 @@ function resetDisplay() {
 function markButton() {
   document.addEventListener('click', button => {
     button.target.disabled = true;
-    handleInteraction()
+    game.handleInteraction
   })
   }
 
@@ -41,7 +33,8 @@ function markButton() {
 // the resetDisplay() function, creates a new Game object,
 // and starts the game.
 document.getElementById("btn__reset").addEventListener("click", (e) => {
+  markButton();
    resetDisplay();
    game = new Game(0, phrases);
-   game.startGame();
+   game.startGame
 });

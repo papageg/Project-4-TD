@@ -1,4 +1,5 @@
 //create a Phrase class to handle the creation of phrases
+
 class Phrase {
 	constructor(phrases) {
 		this.phrases = phrases;
@@ -13,7 +14,9 @@ class Phrase {
 	addPhraseToDisplay() {
 		const phraseList = document.querySelector("#phrase ul");
 		const textPhrase = this.phrase;
-		textPhrase.forEach(phraseLetter => {
+		let phraseArray = textPhrases.split('');
+		getRandomPhrase();
+		textPhrase.forEach()(phraseLetter => {
 			const li = document.createElement('li');
 			phraseList.appenChild(li);
 			li.setAttribute('class', 'hide');

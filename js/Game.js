@@ -13,14 +13,20 @@ class Game {
 
 	//this method randomly retrieves one of the phrases stored in the phrases array.
 	getRandomPhrase() {
-		const randomPhrase = this.phrases[Math.floor(Math.random() * this.phrase.length)];
+		const randomPhrase = this.phrases[Math.floor(Math.random() * this.phrases.length)];
 		return randomPhrase;
 	}
 	//this method checks to see if the button clicked by the player
 	//matches a letter in the phrase.
 	//Try a switch statment??
-	handleInteraction() {
+	 handleInteraction() {
+	  if (checkLetter()) {
+	      phrase.showMatchedLetter();
+	      this.checkForWin();
+	    } else {
 
+	      removeLife();
+	    }
 	}
 	//this method removes a life, removes a heart from the board, and,
 	//if the player is out of lives, ends the game.
@@ -42,6 +48,9 @@ class Game {
 	gameOver() {}
 	//calls the getRandomPhrase() method, and adds that phrase to the board
 	// by calling the Phrase class' addPhraseToDisplay() method.
-	startGame() {}
+	startGame() {
+		const phrase = getRandomPhrase();
+		phrase.addPhraseToDisplay(phrase);
+	}
 
 }
