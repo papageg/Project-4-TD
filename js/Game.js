@@ -49,7 +49,7 @@ class Game {
 	// by calling the Phrase class' addPhraseToDisplay() method.
 	startGame() {
 		const phrase = new Phrase;
-		phrase.getRandomPhrase()
+		getRandomPhrase(phrase)
 		phrase.addPhraseToDisplay(phrase);
 	}
 
