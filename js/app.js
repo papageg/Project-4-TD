@@ -3,12 +3,6 @@ let game = new Game;
  const phrases = ['this is first', 'this is second', 'this is third'];
 
 
-
-function checkLetter() {
-
-}
-
-
 //this function hides the start screen overlay.
 function resetDisplay() {
   document.getElementById("overlay").style.display = "none";
