@@ -19,7 +19,7 @@ function resetDisplay() {
 function markButton() {
   document.addEventListener('click', button => {
     button.target.disabled = true;
-    game.handleInteraction
+    game.handleInteraction()
   })
   }
 
@@ -36,5 +36,5 @@ document.getElementById("btn__reset").addEventListener("click", (e) => {
   markButton();
    resetDisplay();
    game = new Game(0, phrases);
-   game.startGame
+   game.startGame();
 });

@@ -12,7 +12,7 @@ class Phrase {
 	 Make sure the phrase displayed on the screen doesn't include spaces.
 	*/
 	addPhraseToDisplay() {
-		getRandomPhrase();
+		 getRandomPhrase();
 		const phraseList = document.querySelector("#phrase ul");
 		const textPhrase = this.phrases;
 		let phraseArray = textPhrase.split('');
