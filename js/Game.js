@@ -6,14 +6,14 @@
 
 class Game {
 
-	constructor(missed, phrases) {
+	constructor(missed, phrase) {
 		this.missed = missed;
-		this.phrases = phrases;
+		this.phrase = new Phrase();
 	}
 
 	//this method randomly retrieves one of the phrases stored in the phrases array.
 	getRandomPhrase() {
-		const randomPhrase = this.phrases[Math.floor(Math.random() * this.phrases.length)];
+		const randomPhrase = this.phrase[Math.floor(Math.random() * this.phrase.length)];
 		return randomPhrase;
 	}
 	//this method checks to see if the button clicked by the player
@@ -48,8 +48,7 @@ class Game {
 	//calls the getRandomPhrase() method, and adds that phrase to the board
 	// by calling the Phrase class' addPhraseToDisplay() method.
 	startGame() {
-		const phrase = new Phrase;
-		this.getRandomPhrase(phrase);
-		phrase.addPhraseToDisplay(phrase);
+		let phrase = this.getRandomPhrase();
+		this.phrase.addPhraseToDisplay(phrase);
 	}
 }
