@@ -42,7 +42,21 @@ class Phrase {
 	/***************************************************************************/
 	//checks to see if letter selected by player matches a letter in the phrase.
 	checkLetter() {
-
+	const keyBoardLetter = document.getElementsByClassName('key');
+	const phraseOnScreen = document.getElementsByClassName('letter');
+	let e;
+	let i;
+	for (e = 0; e <= keyBoardLetter.length; e++) {
+		console.log(keyBoardLetter[e]);
+	}
+	for (i = 0; i <= phraseOnScreen.length; i++) {
+		console.log(phraseOnScreen[i]);
+	}
+	if (e.innerHTML === i.innerHTML) {
+		showMatchedLetter();
+	} else {
+		console.log('showmatch failed');
+	}
 	}
 	////////////////////////////////////////////////////////////////////////////
 	/***************************************************************************/

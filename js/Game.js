@@ -21,7 +21,7 @@ class Game {
 	//matches a letter in the phrase.
 	//Try a switch statment??
 	 handleInteraction() {
-	  if (checkLetter()) {
+	  if (this.currentPhrase.checkLetter()) {
 	      phrase.showMatchedLetter();
 	      this.checkForWin();
 	    } else {
