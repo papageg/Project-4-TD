@@ -15,7 +15,29 @@ function markButton() {
     button.target.disabled = true;
     game.handleInteraction()
   })
+
   }
+/***************************************************************/
+/////////////////////////////////////////////////////////////////
+// Get all the buttons
+const buttons = document.querySelectorAll('.key');
+
+//loop through buttons to add event listener to each one
+for (let button of buttons) {
+	button.addEventListener('click', function(){
+		//call markButton method and pass in the button
+	});
+}
+
+markButton(button){
+	// disable the button
+	// pass the button to the game.handleInteraction() method
+}
+
+// inside the game.handleInteraction() method, use .textContent to get the value of the letter inside the button that the user intended to click.
+// send this string value to the phrase.checkLetter() method
+/////////////////////////////////////////////////////////////////
+/***************************************************************/
 
 //Add an event listener to the "Start Game" button which calls
 // the resetDisplay() function, creates a new Game object,
