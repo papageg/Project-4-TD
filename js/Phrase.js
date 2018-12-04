@@ -43,28 +43,33 @@ class Phrase {
 	//checks to see if letter selected by player matches a letter in the phrase.
 
 	checkLetter() {
-	let phraseOnScreen = document.getElementsByClassName('letter');
-	let keyBoardLetter = document.getElementsByClassName('key');
-	let e;
-	let i;
-	for (e = 0; e <= keyBoardLetter.length; e++) {
-		console.log(keyBoardLetter[e]);
-	}
-	for (i = 0; i <= phraseOnScreen.length; i++) {
-		console.log(phraseOnScreen[i]);
-	}
-	if (e.innerHTML === i.innerHTML) {
-		return true;
-	} else {
-		console.log('showmatch failed');
-	}
+		if (this.phrase === $('.letter')) {
+			return true;
+		} else {
+			return false;
+		}
+	// let phraseOnScreen = document.getElementsByClassName('letter');
+	// let keyBoardLetter = document.getElementsByClassName('key');
+	// let e;
+	// let i;
+	// for (e = 0; e <= keyBoardLetter.length; e++) {
+	// 	console.log(keyBoardLetter[e]);
+	// }
+	// for (i = 0; i <= phraseOnScreen.length; i++) {
+	// 	console.log(phraseOnScreen[i]);
+	// }
+	// if (e.innerHTML === i.innerHTML) {
+	// 	return true;
+	// } else {
+	// 	console.log('showmatch failed');
+	// }
 	}
 	////////////////////////////////////////////////////////////////////////////
 	/***************************************************************************/
 	// reveals the letter(s) on the board that matches player's selection.
 	showMatchedLetter() {
 		if (this.checkLetter() === true) {
-			phrase.classList.add('chosen');
+			this.phraseLetter.classList.add('show');
 		}
 	}
 }
