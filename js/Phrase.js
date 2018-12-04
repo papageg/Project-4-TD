@@ -64,7 +64,7 @@ class Phrase {
 	// reveals the letter(s) on the board that matches player's selection.
 	showMatchedLetter() {
 		if (this.checkLetter() === true) {
-			this.checkLetter.className = 'show';
+			phrase.classList.add('chosen');
 		}
 	}
 }
