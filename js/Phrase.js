@@ -41,9 +41,10 @@ class Phrase {
 	////////////////////////////////////////////////////////////////////////////
 	/***************************************************************************/
 	//checks to see if letter selected by player matches a letter in the phrase.
+
 	checkLetter() {
-	const keyBoardLetter = document.getElementsByClassName('key');
-	const phraseOnScreen = document.getElementsByClassName('letter');
+	let phraseOnScreen = document.getElementsByClassName('letter');
+	let keyBoardLetter = document.getElementsByClassName('key');
 	let e;
 	let i;
 	for (e = 0; e <= keyBoardLetter.length; e++) {
@@ -53,7 +54,7 @@ class Phrase {
 		console.log(phraseOnScreen[i]);
 	}
 	if (e.innerHTML === i.innerHTML) {
-		showMatchedLetter();
+		return true;
 	} else {
 		console.log('showmatch failed');
 	}
@@ -62,6 +63,8 @@ class Phrase {
 	/***************************************************************************/
 	// reveals the letter(s) on the board that matches player's selection.
 	showMatchedLetter() {
-		console.log('ggg');
+		if (this.checkLetter() === true) {
+			this.checkLetter.className = 'show';
+		}
 	}
 }

@@ -22,7 +22,7 @@ class Game {
 	//Try a switch statment??
 	 handleInteraction() {
 	  if (this.currentPhrase.checkLetter()) {
-	      phrase.showMatchedLetter();
+	      this.currentPhrase.showMatchedLetter();
 	      this.checkForWin();
 	    } else {
 	      this.removeLife();
