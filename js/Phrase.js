@@ -27,11 +27,8 @@ class Phrase {
 	//checks to see if letter selected by player matches a letter in the phrase.
 	checkLetter(letter) {
 		console.log(letter)
-		if (this.phrase.includes(letter).textContent) {
-			return true;
-			showMatchedLetter();
-		} else {
-			return false;
+		if (this.phrase.includes(letter)) {
+			showMatchedLetter(letter);
 		}
 	}
 	////////////////////////////////////////////////////////////////////////////
