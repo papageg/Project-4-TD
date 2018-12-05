@@ -70,7 +70,10 @@ class Phrase {
 		/***************************************************************************/
 		// reveals the letter(s) on the board that matches player's selection.
 		showMatchedLetter(letter) {
-			letter.display = true;
+			for ($('.letter').textContent === letter) {
+					li.addClassName('show');
+			}
+
 			}
 
 	}
