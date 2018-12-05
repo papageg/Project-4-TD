@@ -21,14 +21,14 @@ const buttons = document.querySelectorAll('.key');
 for (let button of buttons) {
 	button.addEventListener('click', function() {
 		//call markButton method and pass in the button
-		markButton(buttons);
+		markButton(button);
 	});
 };
-function markButton(buttons){
+function markButton(button){
 	// disable the button
 	// pass the button to the game.handleInteraction() method
-	buttons.disabled = true;
-	game.handleInteraction(buttons);
+  button.disabled = true;
+	game.handleInteraction(button);
 };
 // inside the game.handleInteraction() method, use .textContent to get the value of the letter inside the button that the user intended to click.
 // send this string value to the phrase.checkLetter() method
