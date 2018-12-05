@@ -69,8 +69,8 @@ class Phrase {
 		////////////////////////////////////////////////////////////////////////////
 		/***************************************************************************/
 		// reveals the letter(s) on the board that matches player's selection.
-		showMatchedLetter(button) {
-				button.classList.add('.show');
+		showMatchedLetter(letter) {
+			letter.display = true;
 			}
-		
+
 	}
