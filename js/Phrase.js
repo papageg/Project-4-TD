@@ -42,12 +42,13 @@ class Phrase {
 		////////////////////////////////////////////////////////////////////////////
 		/***************************************************************************/
 		//checks to see if letter selected by player matches a letter in the phrase.
-		checkLetter(button) {
-			if (this.phrase.includes(button)) {
+		checkLetter(letter) {
+			console.log(letter)
+			if (this.phrase.includes(letter).textContent) {
 				return true;
+				showMatchedLetter();
 			} else {
 				return false;
-				console.log('hmm')
 			}
 			// let phraseOnScreen = document.getElementsByClassName('letter');
 			// let keyBoardLetter = document.getElementsByClassName('key');
@@ -68,9 +69,8 @@ class Phrase {
 		////////////////////////////////////////////////////////////////////////////
 		/***************************************************************************/
 		// reveals the letter(s) on the board that matches player's selection.
-		showMatchedLetter() {
-			if (this.checkLetter() === true) {
-				this.phraseLetter.classList.add('show');
+		showMatchedLetter(button) {
+				button.classList.add('.show');
 			}
-		}
+		
 	}

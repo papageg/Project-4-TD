@@ -17,14 +17,19 @@ class Game {
 	//this method checks to see if the button clicked by the player
 	//matches a letter in the phrase.
 	//Try a switch statment??
+
 	handleInteraction(button) {
-		if (this.currentPhrase.checkLetter(button) === true) {
-			this.currentPhrase.showMatchedLetter();
-			this.checkForWin();
-		} else {
-			this.removeLife();
-		}
-	}
+        let letter = button.textContent;
+        if (this.currentPhrase.checkLetter(letter)) {
+            this.currentPhrase.showMatchedLetter(letter);
+            this.checkForWin();
+        } else {
+            this.removeLife();
+        }
+    }
+
+
+
 	//this method removes a life, removes a heart from the board, and,
 	//if the player is out of lives, ends the game.
 	removeLife() {
