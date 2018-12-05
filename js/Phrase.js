@@ -28,14 +28,14 @@ class Phrase {
 	checkLetter(letter) {
 		console.log(letter)
 		if (this.phrase.includes(letter)) {
-			showMatchedLetter(letter);
+			this.showMatchedLetter(letter);
 		}
 	}
 	////////////////////////////////////////////////////////////////////////////
 	/***************************************************************************/
 	// reveals the letter(s) on the board that matches player's selection.
 	showMatchedLetter(letter) {
-		for ($('.letter').textContent === letter) {
+		if ($('.letter').textContent === letter) {
 			li.addClassName('show');
 		}
 	}
