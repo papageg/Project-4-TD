@@ -21,14 +21,14 @@ const buttons = document.querySelectorAll('.key');
 for (let button of buttons) {
 	button.addEventListener('click', function() {
 		//call markButton method and pass in the button
-		return markButton(button);
+		markButton(buttons);
 	});
 };
-function markButton(button){
+function markButton(buttons){
 	// disable the button
 	// pass the button to the game.handleInteraction() method
-	button.target.disabled = true;
-	game.handleInteraction(button);
+	buttons.disabled = true;
+	game.handleInteraction(buttons);
 };
 // inside the game.handleInteraction() method, use .textContent to get the value of the letter inside the button that the user intended to click.
 // send this string value to the phrase.checkLetter() method
@@ -43,7 +43,7 @@ function markButton(button){
 // the resetDisplay() function, creates a new Game object,
 // and starts the game.
 document.getElementById("btn__reset").addEventListener("click", (e) => {
-	markButton();
+//	markButton();
 	resetDisplay();
 	game = new Game(0, phrases);
 	game.startGame();
