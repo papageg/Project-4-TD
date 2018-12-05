@@ -19,15 +19,15 @@ function resetDisplay() {
 const buttons = document.querySelectorAll('.key');
 //loop through buttons to add event listener to each one
 for (let button of buttons) {
-	buttons.addEventListener('click', function() {
+	button.addEventListener('click', function() {
 		//call markButton method and pass in the button
-		markButton(button);
+		return markButton(button);
 	});
 };
-markButton(button){
+function markButton(button){
 	// disable the button
 	// pass the button to the game.handleInteraction() method
-	button.disabled = true;
+	button.target.disabled = true;
 	game.handleInteraction(button);
 };
 // inside the game.handleInteraction() method, use .textContent to get the value of the letter inside the button that the user intended to click.
