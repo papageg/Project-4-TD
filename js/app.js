@@ -10,13 +10,14 @@ function resetDisplay() {
 //this function is called when a player selects a letter.
 //It disables the button on the onscreen keyboard and calls
 //the handleInteraction() method of the Game class.
-function markButton() {
-  document.addEventListener('click', button => {
-    button.target.disabled = true;
-    game.handleInteraction()
-  });
+// function markButton() {
+//   document.addEventListener('click', button => {
+//     button.target.disabled = true;
+//     game.handleInteraction()
+//     });
+//   }
 
-  }
+
 /***************************************************************/
 /////////////////////////////////////////////////////////////////
 // Get all the buttons
@@ -34,7 +35,7 @@ markButton(button) {
 	// disable the button
 	// pass the button to the game.handleInteraction() method
   button.disabled = true;
-  button.game.handleInteraction()
+  game.handleInteraction(button)
 }
 
 
@@ -42,6 +43,9 @@ markButton(button) {
 // send this string value to the phrase.checkLetter() method
 /////////////////////////////////////////////////////////////////
 /***************************************************************/
+
+
+
 
 //Add an event listener to the "Start Game" button which calls
 // the resetDisplay() function, creates a new Game object,

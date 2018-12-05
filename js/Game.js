@@ -20,8 +20,8 @@ class Game {
 	//this method checks to see if the button clicked by the player
 	//matches a letter in the phrase.
 	//Try a switch statment??
-	 handleInteraction() {
-	  if (this.currentPhrase.checkLetter()) {
+	 handleInteraction(button) {
+	  if (this.currentPhrase.button) {
 	      this.currentPhrase.showMatchedLetter();
 	      this.checkForWin();
 	    } else {
