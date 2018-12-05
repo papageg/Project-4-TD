@@ -18,7 +18,7 @@ class Game {
 	//matches a letter in the phrase.
 	//Try a switch statment??
 	handleInteraction(button) {
-		if ($('.letter').textContent === button.textContent) {
+		if (this.currentPhrase.checkLetter(button) === true) {
 			this.currentPhrase.showMatchedLetter();
 			this.checkForWin();
 		} else {

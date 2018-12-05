@@ -42,11 +42,12 @@ class Phrase {
 		////////////////////////////////////////////////////////////////////////////
 		/***************************************************************************/
 		//checks to see if letter selected by player matches a letter in the phrase.
-		checkLetter() {
-			if (this.phrase === $('.letter')) {
+		checkLetter(button) {
+			if (this.phrase.includes(button)) {
 				return true;
 			} else {
 				return false;
+				console.log('hmm')
 			}
 			// let phraseOnScreen = document.getElementsByClassName('letter');
 			// let keyBoardLetter = document.getElementsByClassName('key');
