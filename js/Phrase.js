@@ -36,7 +36,7 @@ class Phrase {
 	// reveals the letter(s) on the board that matches player's selection.
 	showMatchedLetter(letter) {
 		if ($('.letter').textContent === letter) {
-			li.addClassName('show');
+			this.checkLetter.addClassName('show');
 		}
 	}
 }
