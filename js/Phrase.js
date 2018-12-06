@@ -28,15 +28,16 @@ class Phrase {
 	checkLetter(letter) {
 		console.log(letter)
 		if (this.phrase.includes(letter)) {
-			this.showMatchedLetter(letter);
+			//this.showMatchedLetter(letter);
 		}
 	}
 	////////////////////////////////////////////////////////////////////////////
 	/***************************************************************************/
 	// reveals the letter(s) on the board that matches player's selection.
 	showMatchedLetter(letter) {
-		if ($('.letter').textContent === letter) {
-			this.checkLetter.addClassName('show');
-		}
+	//	if ($('.letter').textContent === letter) {
+			//this.checkLetter.addClassName('show');
+			letter.addClassName('show');
+	//	}
 	}
 }
