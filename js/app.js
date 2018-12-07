@@ -7,12 +7,7 @@ function resetDisplay() {
 //this function is called when a player selects a letter.
 //It disables the button on the onscreen keyboard and calls
 //the handleInteraction() method of the Game class.
-// function markButton() {
-//   document.addEventListener('click', button => {
-//     button.target.disabled = true;
-//     game.handleInteraction()
-//     });
-//   }
+
 /***************************************************************/
 /////////////////////////////////////////////////////////////////
 // Get all the buttons
@@ -22,6 +17,7 @@ for (let button of buttons) {
 	button.addEventListener('click', function() {
 		//call markButton method and pass in the button
 		markButton(button);
+		$(button).addClass('chosen')
 	});
 };
 function markButton(button){
@@ -29,6 +25,7 @@ function markButton(button){
 	// pass the button to the game.handleInteraction() method
   button.disabled = true;
 	game.handleInteraction(button);
+
 };
 // inside the game.handleInteraction() method, use .textContent to get the value of the letter inside the button that the user intended to click.
 // send this string value to the phrase.checkLetter() method

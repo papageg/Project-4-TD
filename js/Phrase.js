@@ -28,16 +28,24 @@ class Phrase {
 	checkLetter(letter) {
 		console.log(letter)
 		if (this.phrase.includes(letter)) {
-			//this.showMatchedLetter(letter);
+			return true;
+		} else {
+			return false;
 		}
 	}
 	////////////////////////////////////////////////////////////////////////////
 	/***************************************************************************/
 	// reveals the letter(s) on the board that matches player's selection.
 	showMatchedLetter(letter) {
-	//	if ($('.letter').textContent === letter) {
-			//this.checkLetter.addClassName('show');
-			letter.addClassName('show');
-	//	}
+	  // box is an individual list item in all the list items
+	  $('.letter').each((index, box) => {  // for each "box"
+	   if(box.textContent == letter) {  // if the textContent matches the letter
+	     box.classList.add("show");      // reveal that box
+	   }
+	 })
 	}
+
+
+
+
 }

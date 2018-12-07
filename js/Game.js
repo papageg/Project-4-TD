@@ -25,6 +25,7 @@ class Game {
             this.checkForWin();
         } else {
             this.removeLife();
+
         }
     }
 
@@ -33,18 +34,29 @@ class Game {
 	//this method removes a life, removes a heart from the board, and,
 	//if the player is out of lives, ends the game.
 	removeLife() {
-		// 	if (scoreboard <= 1) {
-		//     scoreboard.remove(scoreboard[0]);
-		// }
-		// else {
-		// 	alert('Game Over!');
-		// }
+			this.missed++;
+			$('.tries').eq(this.missed - 1).hide();
+			if (this.missed >= 5 || this.checkForWin()) {
+				this.gameOver();
+			}
 	}
 	//this method checks to see if the player has selected all of the letters.
-	checkForWin() {}
+	checkForWin() {
+		if($('.letter').length ===  $('.letter.show').length) {
+			alert('you win');
+		}
+	}
 	//this method displays a message if the player
 	// wins or a different message if they lose.
-	gameOver() {}
+	gameOver() {
+		if (this.checkForWin() === true){
+			$('#overlay').addClass('win').show();
+			alert('You Win')
+		} else {
+			$('#overlay').addClass('lose').show();
+			alert('You Lose')
+		}
+	}
 	//calls the getRandomPhrase() method, and adds that phrase to the board
 	// by calling the Phrase class' addPhraseToDisplay() method.
 	startGame() {
