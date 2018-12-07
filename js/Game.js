@@ -44,6 +44,7 @@ class Game {
 	checkForWin() {
 		if($('.letter').length ===  $('.letter.show').length) {
 			$('#overlay').addClass('win').show();
+			$('#game-over-message').text('You Win');
 			alert('you win');
 		}
 	}
@@ -51,9 +52,11 @@ class Game {
 	// wins or a different message if they lose.
 	gameOver() {
 			$('#overlay').addClass('lose').show();
+			$('#game-over-message').text('You Lose');
+			//<h1 id="game-over-message"></h1>
 			alert('You Lose')
 		}
-	
+
 	//calls the getRandomPhrase() method, and adds that phrase to the board
 	// by calling the Phrase class' addPhraseToDisplay() method.
 	startGame() {
