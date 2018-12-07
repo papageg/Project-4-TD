@@ -11,6 +11,10 @@ class Phrase {
 	 Make sure the phrase displayed on the screen doesn't include spaces.
 	*/
 	addPhraseToDisplay() {
+		if($('li') === $('.letter') || $('.space')){
+			$('.letter').remove();
+			$('.space').remove();
+		}
 		const phraseList = document.querySelector("#phrase ul");
 		const textPhrase = this.phrase;
 		let phraseArray = textPhrase.split('');
@@ -21,6 +25,7 @@ class Phrase {
 			li.textContent = phraseLetter;
 			phraseLetter !== ' ' ? li.className = 'letter' : li.className = 'space';
 		})
+
 	}
 	////////////////////////////////////////////////////////////////////////////
 	/***************************************************************************/
