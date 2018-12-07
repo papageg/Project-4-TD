@@ -43,20 +43,17 @@ class Game {
 	//this method checks to see if the player has selected all of the letters.
 	checkForWin() {
 		if($('.letter').length ===  $('.letter.show').length) {
+			$('#overlay').addClass('win').show();
 			alert('you win');
 		}
 	}
 	//this method displays a message if the player
 	// wins or a different message if they lose.
 	gameOver() {
-		if (this.checkForWin() === true){
-			$('#overlay').addClass('win').show();
-			alert('You Win')
-		} else {
 			$('#overlay').addClass('lose').show();
 			alert('You Lose')
 		}
-	}
+	
 	//calls the getRandomPhrase() method, and adds that phrase to the board
 	// by calling the Phrase class' addPhraseToDisplay() method.
 	startGame() {
