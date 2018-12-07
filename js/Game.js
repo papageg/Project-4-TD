@@ -45,7 +45,6 @@ class Game {
 		if($('.letter').length ===  $('.letter.show').length) {
 			$('#overlay').addClass('win').show();
 			$('#game-over-message').text('You Win');
-			alert('you win');
 		}
 	}
 	//this method displays a message if the player
@@ -53,8 +52,8 @@ class Game {
 	gameOver() {
 			$('#overlay').addClass('lose').show();
 			$('#game-over-message').text('You Lose');
+			$('#btn__reset') = new Game;
 			//<h1 id="game-over-message"></h1>
-			alert('You Lose')
 		}
 
 	//calls the getRandomPhrase() method, and adds that phrase to the board
