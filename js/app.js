@@ -23,7 +23,8 @@ for (let button of buttons) {
 function markButton(button){
 	// disable the button
 	// pass the button to the game.handleInteraction() method
-  button.disabled = true;
+//  button.disabled = true;
+	$(button).prop('disabled', true)
 	game.handleInteraction(button);
 	// if (game.gameOver() === true){
 	// 	button.disabled = false;
