@@ -51,6 +51,8 @@ document.getElementById("btn__reset").addEventListener("click", (e) => {
 //	markButton();
 $(".key").removeClass("chosen");
 $('.key').prop('disabled', false)
+$('#overlay').removeClass('lose');
+$('#overlay').removeClass('win');
 	resetDisplay();
 	game = new Game(0, phrases);
 	game.startGame();

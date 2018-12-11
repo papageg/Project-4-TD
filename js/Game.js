@@ -44,6 +44,7 @@ class Game {
 	checkForWin() {
 		if($('.letter').length ===  $('.letter.show').length) {
 			$('#overlay').addClass('win').show();
+		//	$('#overlay').addClass('lose').hide();
 			$('#game-over-message').text('You Win');
 		}
 	}
