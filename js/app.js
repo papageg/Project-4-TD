@@ -25,7 +25,10 @@ function markButton(button){
 	// pass the button to the game.handleInteraction() method
   button.disabled = true;
 	game.handleInteraction(button);
-
+	// if (game.gameOver() === true){
+	// 	button.disabled = false;
+	// 	$('.chosen').removeClass("chosen");
+	// }
 };
 // inside the game.handleInteraction() method, use .textContent to get the value of the letter inside the button that the user intended to click.
 // send this string value to the phrase.checkLetter() method
