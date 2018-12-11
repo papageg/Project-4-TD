@@ -53,8 +53,8 @@ class Game {
 	gameOver(button) {
 			$('#overlay').addClass('lose').show();
 			$('#game-over-message').text('You Lose');
-			$(button).disabled = true;
-			$('.chosen').removeClass("chosen");
+			button.disabled = false;
+			$('.key').removeClass("chosen");
 			//<h1 id="game-over-message"></h1>
 		}
 
