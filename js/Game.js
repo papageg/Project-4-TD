@@ -38,7 +38,6 @@ class Game {
 			$('.tries').eq(this.missed - 1).hide();
 			if (this.missed >= 5 || this.checkForWin()) {
 				this.gameOver();
-
 			}
 	}
 	//this method checks to see if the player has selected all of the letters.
@@ -53,8 +52,9 @@ class Game {
 	gameOver(button) {
 			$('#overlay').addClass('lose').show();
 			$('#game-over-message').text('You Lose');
-			$(button).prop('disabled', false)
-			$('button.key').removeClass(".chosen");
+
+		//	$(button).prop('disabled', false)
+		//	$('button.key').removeClass(".chosen");
 			//<h1 id="game-over-message"></h1>
 		}
 

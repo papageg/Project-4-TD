@@ -43,8 +43,14 @@ function markButton(button){
 //Add an event listener to the "Start Game" button which calls
 // the resetDisplay() function, creates a new Game object,
 // and starts the game.
+// $("btn__reset").click(function(){
+//  $("button").removeClass("chosen");
+//  $(button).prop('disabled', false)
+// });
 document.getElementById("btn__reset").addEventListener("click", (e) => {
 //	markButton();
+$(".key").removeClass("chosen");
+$('.key').prop('disabled', false)
 	resetDisplay();
 	game = new Game(0, phrases);
 	game.startGame();
