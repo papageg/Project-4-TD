@@ -1,5 +1,5 @@
 let game = new Game;
-const phrases = ['this is first', 'this is second', 'this is third'];
+
 //this function hides the start screen overlay.
 function resetDisplay() {
 	document.getElementById("overlay").style.display = "none";
@@ -53,6 +53,11 @@ $(".key").removeClass("chosen");
 $('.key').prop('disabled', false)
 $('#overlay').removeClass('lose');
 $('#overlay').removeClass('win');
+$('.tries').eq(0).show();
+$('.tries').eq(1).show();
+$('.tries').eq(2).show();
+$('.tries').eq(3).show();
+$('.tries').eq(4).show();
 	resetDisplay();
 	game = new Game(0, phrases);
 	game.startGame();

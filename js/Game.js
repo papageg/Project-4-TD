@@ -3,6 +3,7 @@
 //getting random phrases, checking for a win,
 // and removing a life counter.
 //create game class
+const phrases = ['a diamond in the rough', 'is the Pope Catholic', 'It never rains but it pours','life begins at forty','neither here nor there'];
 class Game {
 	constructor(missed, phrases) {
 		this.missed = missed;
