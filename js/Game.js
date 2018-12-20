@@ -12,7 +12,7 @@ class Game {
 	}
 	//this method randomly retrieves one of the phrases stored in the phrases array.
 	getRandomPhrase() {
-		const randomPhrase = this.phrases[Math.floor(Math.random() * this.phrases.length)];
+		const randomPhrase = this.phrases[Math.floor(Math.random() * this.phrases.length)].toLowerCase();
 		return randomPhrase;
 	}
 	//this method checks to see if the button clicked by the player
